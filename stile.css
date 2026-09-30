@@ -1,0 +1,626 @@
+/* =======================================================
+RESET GERAL
+Remove margens e define padrão
+======================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+}
+
+/* =======================================================
+CONFIGURAÇÕES GERAIS
+======================================================= */
+
+body{
+  background:#0f0f0f;
+  color:white;
+  overflow-x:hidden;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* =======================================================
+CABEÇALHO
+======================================================= */
+
+.cabecalho{
+
+  position:fixed;
+
+  top:0;
+
+  width:100%;
+
+  z-index:999;
+
+  padding:20px 6%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  background:rgba(0,0,0,0.5);
+
+  backdrop-filter:blur(10px);
+
+}
+
+/* Logo */
+
+.logo{
+
+  font-size:24px;
+
+  font-weight:800;
+
+  color:#ffb400;
+
+}
+
+/* Menu */
+
+.menu{
+
+  display:flex;
+
+  gap:30px;
+
+}
+
+/* Links */
+
+.menu a{
+
+  color:white;
+
+  font-weight:500;
+
+  transition:0.3s;
+
+}
+
+/* Hover */
+
+.menu a:hover{
+
+  color:#ffb400;
+
+}
+
+/* Menu mobile */
+
+.menu-mobile{
+
+  display:none;
+
+  font-size:30px;
+
+  cursor:pointer;
+
+}
+
+/* =======================================================
+BANNER PRINCIPAL
+======================================================= */
+
+.banner-principal{
+
+  height:100vh;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:center;
+
+  padding:0 6%;
+
+  overflow:hidden;
+
+}
+
+/* Camada escura */
+
+.banner-principal::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:rgba(0,0,0,0.55);
+
+  z-index:1;
+
+}
+
+/* Área dos slides */
+
+.area-slides{
+
+  position:absolute;
+
+  inset:0;
+
+}
+
+/* Cada slide */
+
+.slide{
+
+  position:absolute;
+
+  inset:0;
+
+  background-size:cover;
+
+  background-position:center;
+
+  opacity:0;
+
+  transition:1s;
+
+}
+
+/* Slide ativo */
+
+.slide.ativo{
+
+  opacity:1;
+
+  transform:scale(1.05);
+
+}
+
+/* Conteúdo */
+
+.conteudo-banner{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:650px;
+
+  animation:animacaoSubir 1s ease;
+
+}
+
+/* Texto pequeno */
+
+.texto-destaque{
+
+  color:#ffb400;
+
+  font-weight:700;
+
+  margin-bottom:20px;
+
+  letter-spacing:2px;
+
+}
+
+/* Título */
+
+.conteudo-banner h1{
+
+  font-size:64px;
+
+  line-height:1.1;
+
+  margin-bottom:25px;
+
+}
+
+/* Destaque */
+
+.conteudo-banner h1 span{
+
+  color:#ffb400;
+
+}
+
+/* Texto */
+
+.conteudo-banner p{
+
+  font-size:18px;
+
+  line-height:1.8;
+
+  color:#d1d1d1;
+
+  margin-bottom:40px;
+
+}
+
+/* Botões */
+
+.area-botoes{
+
+  display:flex;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+}
+
+/* Botão padrão */
+
+.botao{
+
+    display: inline-block;
+
+    padding:16px 34px;
+
+    border-radius:10px;
+
+    font-weight:750;
+
+    transition:0.5s;
+
+}
+/* Botão amarelo */
+
+.botao-amarelo{
+
+  background:#ffb400;
+
+  color:black;
+
+}
+
+/* Hover */
+
+.botao-amarelo:hover{
+
+  transform:translateY(-5px);
+
+}
+
+/* Botão borda */
+
+.botao-borda{
+
+  border:2px solid #ffb400;
+
+  color:white;
+
+}
+
+/* Hover */
+
+.botao-borda:hover{
+
+  background:#ffb400;
+
+  color:black;
+
+}
+
+/* =======================================================
+ESTATÍSTICAS
+======================================================= */
+
+.estatisticas{
+
+  padding:80px 6%;
+
+  background:#161616;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:20px;
+
+}
+
+/* Card */
+
+.card-estatistica{
+
+  background:#1f1f1f;
+
+  padding:35px;
+
+  border-radius:18px;
+
+  transition:0.4s;
+
+}
+
+/* Hover */
+
+.card-estatistica:hover{
+
+  transform:translateY(-10px);
+
+}
+
+/* Número */
+
+.card-estatistica h2{
+
+  color:#ffb400;
+
+  font-size:40px;
+
+  margin-bottom:10px;
+
+}
+
+/* =======================================================
+SEÇÕES
+======================================================= */
+
+section{
+
+  padding:110px 6%;
+
+}
+
+/* =======================================================
+SERVIÇOS
+======================================================= */
+
+.servicos{
+
+  background:white;
+
+  color:black;
+
+}
+
+/* Título */
+
+.titulo-secao{
+
+  text-align:center;
+
+  margin-bottom:70px;
+
+}
+
+/* Texto pequeno */
+
+.titulo-secao span{
+
+  color:#ffb400;
+
+  font-weight:700;
+
+}
+
+/* Título */
+
+.titulo-secao h2{
+
+  font-size:46px;
+
+  margin-top:15px;
+
+}
+
+/* Grade */
+
+.grade-servicos{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:25px;
+
+}
+
+/* Card */
+
+.card-servico{
+
+  background:#f7f7f7;
+
+  padding:40px;
+
+  border-radius:18px;
+
+  transition:0.4s;
+
+}
+
+/* Hover */
+
+.card-servico:hover{
+
+  background:#111;
+
+  color:white;
+
+  transform:translateY(-10px);
+
+}
+
+/* =======================================================
+GALERIA
+======================================================= */
+
+.galeria-imagens{
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:25px;
+
+}
+
+/* Imagem */
+
+.galeria-imagens img{
+
+  width:100%;
+
+  border-radius:20px;
+
+}
+
+/* =======================================================
+CTA
+======================================================= */
+
+.caixa-cta{
+
+  background:linear-gradient(to right,#ffb400,#ff8c00);
+
+  color:black;
+
+  text-align:center;
+
+  border-radius:30px;
+
+  padding:80px 40px;
+
+}
+
+/* Título */
+
+.caixa-cta h2{
+
+  font-size:50px;
+
+  margin-bottom:20px;
+
+}
+
+/* =======================================================
+RODAPÉ
+======================================================= */
+
+.rodape{
+
+  padding:70px 6%;
+
+  background:#080808;
+
+  text-align:center;
+
+  color:#888;
+
+}
+
+/* =======================================================
+WHATSAPP
+======================================================= */
+
+.botao-whatsapp{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  width:65px;
+
+  height:65px;
+
+  background:#25d366;
+
+  border-radius:50%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  font-size:32px;
+
+  color:white;
+
+}
+
+/* =======================================================
+ANIMAÇÃO
+======================================================= */
+
+@keyframes animacaoSubir{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+/* =======================================================
+RESPONSIVIDADE
+======================================================= */
+
+@media(max-width:992px){
+
+  .menu{
+    display:none;
+  }
+
+  .menu-mobile{
+    display:block;
+  }
+
+  .conteudo-banner h1{
+    font-size:42px;
+  }
+
+  .estatisticas{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .grade-servicos{
+    grid-template-columns:1fr;
+  }
+
+  .galeria-imagens{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .banner-principal{
+    padding-top:120px;
+  }
+
+  .conteudo-banner h1{
+    font-size:34px;
+  }
+
+  .estatisticas{
+    grid-template-columns:1fr;
+  }
+
+}
